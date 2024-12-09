@@ -75,7 +75,6 @@ public class MainActivity extends AppCompatActivity {
             intent = new Intent(MainActivity.this, SubActivity7.class);
         } else if (view.getId() == R.id.button8) {
             intent = new Intent(MainActivity.this, SubActivity8.class);
-            //intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://hometax.go.kr/"));
         }
         if (intent != null)
             startActivity(intent);
