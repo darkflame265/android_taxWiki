@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<!--    <item-->
+<!--        android:id="@+id/search"-->
+<!--        android:title="더보기"-->
+<!--        android:icon="@drawable/ic_search"-->
+<!--        app:showAsAction="always" />-->
+
+<!--    <item-->
+<!--        android:id="@+id/menu"-->
+<!--        android:title="더보기"-->
+<!--        android:icon="@drawable/ic_menu"-->
+<!--        app:showAsAction="always" />-->
+
+    <item
+        android:id="@+id/goSource"
+        android:title="개발 소스 출처"
+        app:showAsAction="never" />
+</menu>

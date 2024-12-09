@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:title="부가가치세"
+        />
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:fillViewport="true"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:text="부가가치세"
+                android:textSize="40dp"
+                android:textAlignment="center"
+                android:gravity="center" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="정의 : 상품과 서비스를 판매하고 벌어들인 부가가치(이윤)에 과세하는 세금."
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:gravity="center" />
+
+            <TextView
+                android:paddingTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="-주로 자영업자나 개인사업자들이 많이 접하는 조세 항목.\n-종합소득세와 다르게 1년에 총 두 번 납부한다.\n-부가세신고를 안하고 늦출수록, 무신고가산세의 금액도 늘어난다.\n"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="세율"
+                android:textSize="20dp"
+                android:layout_marginTop="50dp"
+                android:textAlignment="center"
+                android:gravity="center" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/graph2" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="일반과세자 간이과세자 구분"
+                android:textSize="30dp"
+                android:layout_marginTop="50dp"
+                android:textAlignment="center"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="주로 소비자를 대상으로 하는 업종으로 연간 매출액이 4,800만원 이상 8,000만원 미만 미만인 간이과세자에
+해당하며, 그 외의 개인사업자 모두는 일반과세자입니다."
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="*간이과세자와 일반과세자는 부가가치세에서만 차이가 있고 소득세, 원천세 등에서는 차이가 없습니다."
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1. 세금부담\n일반과세자의 부가가치율은 매출 10%, 매입 10%.\n간이과세자는 공급한 대가에 업종별 부가가치율을 적용해 곱해서 실제로는 매출세액의 0.5~3%의 낮은 세율로 적용받게 됩니다."
+                android:textSize="20dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="2. 세금계산서 발행\n간이과세자는 부가세 혜택을 받는 대신, 연매출액이 4,800만원 미만인 간이사업자는 세금계산서 발행이 불가합니다.\n사업초기, 매입세액이 매출세액보다 많은 경우,일반과세자는 차액만큼 환급을 받지만 간이과세자는 환급을 받지 못합니다.\n사업자등록시 간이과세자의 혜택을 누리고자 간이과세자로 등록한 경우사업초기 매입세액이 많더라도 돌려받지 못하게 되는 상황이 발생할 수 있습니다.\n *간이과세자에게 세금계산서를 발행하는 것은 가능합니다."
+                android:textSize="20dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="3. 세제혜택\n일반과세자는 1년에 2번 부가가치세를 신고하지만, 간이과세자는 1년에 1번만 하면 됩니다.\n간이과세자 중에서도 연간 공급대가가 4,800만원 미만인 경우, 부가가치세 신고는 하지만 재고납부세액을 제외한 세금을 전혀 내지 않아도 되는 큰 장점이 있습니다."
+                android:textSize="20dp"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

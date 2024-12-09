@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:title="상속세"
+        />
+
+    <ScrollView
+        android:id="@+id/scrollView4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:fillViewport="true"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:text="상속세"
+                android:textSize="40dp"
+                android:textAlignment="center"
+                android:gravity="center" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="정의 : "
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:gravity="center" />
+
+            <TextView
+                android:paddingTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="-상속세에는 두가지 방식이 있는데, 유산세(estate tax)란 사망자의 모든 유산에 과세하는 경우이며, 유산취득세(inheritance tax)란 수증자가 물려받은 자산에만 과세하는 방식이다.\n한국의 상속세는 유산세(Estate tax) 방식이다.
+"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="상속세 세율"
+                android:textSize="20dp"
+                android:layout_marginTop="50dp"
+                android:textAlignment="center"
+                android:gravity="center" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/graph3" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="상속 우선 순위"
+                android:textSize="30dp"
+                android:layout_marginTop="50dp"
+                android:textAlignment="center"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="상속 우선순위\n1순위: 직계비속과 배우자\n2순위: 직계존속과 배우자\n3순위: 형제자매\n4순위: 4촌 이내의 방계혈족"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="*직계비속 : 자녀, 손자녀, 중손자녀\n직계존속 : 부모, 조부모"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="상속세 존재 이유"
+                android:textSize="30dp"
+                android:layout_marginTop="50dp"
+                android:textAlignment="center"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1. 부의 세습억제\n부가 무한정 세습된다면 자본주의의 근본적인 전제 중 하나인 시장에서의 자산의 순환이 일어나지 않게 된다.\n부는 증식하는 특성이 있으므로 세대가 거듭할수록 자산은 일부에게만 집중되게 되고, 자산은 자유로운 거래의 수단이기보다는 개인적인 부의 축적수단으로만 이용되게 된다."
+                android:textSize="20dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="2. 기회균등의 제고\n 경제적 불평등을 완화하고, 사회적 평등을 증진하기 위해 필요하다.\n상속세를 통해 상속재산이 사회에 환원되도록 함으로써 사회적 불만을 억제한다."
+                android:textSize="20dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="상속세 공제"
+                android:textSize="30dp"
+                android:layout_marginTop="50dp"
+                android:textAlignment="center"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1. 기본 공제: 상속인 1인당 5천만 원이 기본 공제로 제공됩니다. 자녀가 있을 경우, 각 자녀에 대해 이 공제를 적용할 수 있습니다.
+
+\n\n2. 배우자 공제: 배우자가 상속인인 경우, 최대 6억 원까지 공제를 받을 수 있습니다. 이는 배우자에게 주는 특별한 혜택입니다.
+
+\n\n3. 자녀 공제: 자녀가 상속인일 경우, 자녀 수에 따라 기본 공제를 적용할 수 있습니다. 예를 들어, 자녀가 두 명이라면 총 1억 원(5천만 원 × 2명)이 공제됩니다.
+
+\n\n4. 장애인 공제: 장애인 상속인에게는 추가로 3천만 원의 공제가 가능합니다.
+
+\n\n5. 부양가족 공제: 상속인이 부양하고 있었던 가족이 있을 경우, 추가 공제를 받을 수 있습니다.
+
+\n\n6. 농업 및 사업 자산 공제: 농업이나 사업 자산에 대한 특별 공제가 있으며, 특정 조건을 충족해야 합니다."
+                android:textSize="20dp"
+                />
+
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

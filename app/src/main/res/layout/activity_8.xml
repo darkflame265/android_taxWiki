@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:title="세금 계산기"
+        />
+
+    <ScrollView
+        android:id="@+id/scrollView8"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:fillViewport="true"
+        >
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:text="간단한 종합소득세 계산"
+                android:textSize="40dp"
+                android:textAlignment="center"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="25dp"
+                android:text="STEP 01. 종합소득금액 구하기"
+                android:textSize="25dp"
+                android:textAlignment="center"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="-종합소득 중 근로소득만 반영합니다.\n 일년 동안 일하며 벌어들인 금액을 뜻합니다.\n(월급이 200이면 근로소득은 2400만원)"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:gravity="center" />
+
+
+            <EditText
+                android:id="@+id/editText1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:hint="얻은 근로소득 금액"
+                android:inputType="number"
+                android:gravity="end"
+                />
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="25dp"
+                android:text="STEP 02. 소득공제 차감"
+                android:textSize="25dp"
+                android:textAlignment="center"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="-종합소득금액에서 자신에게 해당되는 소득공제금액을 차감합니다. 이렇게 구한 값이 '과세표준'입니다.\n\n 1.인적공제(기본공제, 추가공제), 2.특별소득공제, 3.연금보험료 공제, 4.조특법상 소득공제"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:gravity="center"/>
+
+            <CheckBox
+                android:id="@+id/check1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="기본공제-본인(150만원)"
+                android:buttonTint="#00ff00"
+                android:checked="true"/>
+
+            <CheckBox
+                android:id="@+id/check2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="기본공제-배우자(150만원)"
+                android:buttonTint="#00ff00"/>
+
+            <CheckBox
+                android:id="@+id/check3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="기본공제-부양자(1인 150만원)"
+                android:buttonTint="#00ff00"/>
+
+            <CheckBox
+                android:id="@+id/check4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="추가공제-경로우대(1인 100만원)"
+                android:buttonTint="#00ff00"/>
+
+            <CheckBox
+                android:id="@+id/check5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="추가공제-장애인(1인 200만원)"
+                android:buttonTint="#00ff00" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="25dp"
+                android:text="STEP 03. 산출세액 구하기"
+                android:textSize="25dp"
+                android:textAlignment="center"
+                android:gravity="center" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="-과세표준에서 자신에게 해당되는 세율(소득세)을 곱합니다. 이렇게 구한 값이 '산출세액'입니다."
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:gravity="center" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:src="@drawable/graph6" />
+
+
+            <TextView
+                android:id="@+id/result1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="과세표준 : DataFalse"
+                android:textSize="25dp"
+                android:textAlignment="center"
+                android:gravity="center" />
+            <TextView
+                android:id="@+id/result2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="세율 : DataFalse"
+                android:textSize="25dp"
+                android:textAlignment="center"
+                android:gravity="center" />
+            <TextView
+                android:id="@+id/result3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="누진공제 : DataFalse"
+                android:textSize="25dp"
+                android:textAlignment="center"
+                android:gravity="center" />
+            <TextView
+                android:id="@+id/result4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="산출세액 : DataFalse"
+                android:textSize="25dp"
+                android:textAlignment="center"
+                android:gravity="center" />
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="적용"
+                android:backgroundTint="@color/black"
+                android:onClick="set_text"
+                android:layout_gravity="center"
+                android:textSize="30dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="25dp"
+                android:text="STEP 04. 세액공제 또는 세액감면 적용하기"
+                android:textSize="25dp"
+                android:textAlignment="center"
+                android:gravity="center" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="-산출세액에서 세액공제 또는 세액가감면 금액을 차감합니다. 또 가산세가 있으면 증감하고, 이전에 미리 납부한 기납부 세액이 있으면 차감합니다."
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:gravity="center" />
+
+            <CheckBox
+                android:id="@+id/check6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="#00ff00"
+                android:text="표준세액공제(1인 7만원)"
+                android:checked="true"/>
+
+            <CheckBox
+                android:id="@+id/check7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="#00ff00"
+                android:text="출산 밎 입양 공제(3살 이하)(1인 30만원)"/>
+
+            <CheckBox
+                android:id="@+id/check8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="#00ff00"
+                android:text="자녀세액공제(7세 이상)(1인 15만원)"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="25dp"
+                android:text="STEP 05. 종합소득세 구하기"
+                android:textSize="25dp"
+                android:textAlignment="center"
+                android:gravity="center" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="-마지막으로 가산세가 있으면 증감하고, 이전에 미리 납부한 기납부 세액이 있으면 차감합니다. 이렇게 구한 값이 '종합소득세액'입니다."
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/result5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="\n세액공제 : DataFalse"
+                android:textSize="25dp"
+                android:textAlignment="center"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/result6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="종합소득세 : DataFalse"
+                android:textSize="25dp"
+                android:textAlignment="center"
+                android:gravity="center" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="적용"
+                android:backgroundTint="@color/black"
+                android:onClick="set_text2"
+                android:layout_gravity="center"
+                android:textSize="30dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

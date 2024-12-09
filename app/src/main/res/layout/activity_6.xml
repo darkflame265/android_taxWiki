@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:title="취득세"
+        />
+
+    <ScrollView
+        android:id="@+id/scrollView6"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:fillViewport="true"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:text="취득세"
+                android:textSize="40dp"
+                android:textAlignment="center"
+                android:gravity="center" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="정의 :  부동산, 차량 등 과세대상에 포함된 물품을 소유한 행위에 부과하는 조세."
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:gravity="center" />
+
+            <TextView
+                android:paddingTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="-과세대상 : 부동산, 차량, 항공기, 배, 골프 이용회원권, 기계장비."
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:gravity="center" />
+
+            <TextView
+                android:paddingTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="-주택은 소유한 주택 개수에 따라 1~12%.
+\n-골프장, 고급주택, 선박, 오락장은 12%
+\n-자동차는 영업용이나, 비영업용이나 등 따져서 2~7% 납부"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="취득세와 재산세의 차이"
+                android:textSize="30dp"
+                android:layout_marginTop="50dp"
+                android:textAlignment="center"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="\n1. 취득세
+\n정의: 취득세는 부동산이나 특정 자산을 취득할 때 부과되는 세금입니다.
+\n부과 시점: 자산을 구매하거나 취득하는 순간에 발생합니다.
+\n세율: 자산의 종류와 가액에 따라 세율이 다르며, 일반적으로 부동산의 경우 1%에서 3% 사이로 부과됩니다.
+\n용도: 취득세는 자산의 소유권 이전에 따른 세금으로, 자산을 취득할 때의 부담을 반영합니다.
+\n\n2. 재산세
+\n정의: 재산세는 일정 기간 동안 보유하고 있는 재산에 대해 부과되는 세금입니다.
+\n부과 시점: 재산을 보유하는 동안 매년 부과됩니다.
+\n세율: 재산의 종류와 가액에 따라 다르게 책정되며, 일반적으로 부동산의 경우 평가액의 일정 비율로 부과됩니다.
+\n용도: 재산세는 지방자치단체의 재원으로 사용되며, 지역 사회의 공공 서비스와 인프라를 지원하는 데 기여합니다.
+\n\n3.요약
+\n취득세는 자산을 구매할 때 한 번만 부과되는 세금이고, 재산세는 자산을 보유하는 동안 매년 지속적으로 부과되는 세금입니다.
+\n두 세금은 부과되는 시점과 목적이 다르기 때문에 구분됩니다."
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="차량 구매 취득세 예시."
+                android:textSize="30dp"
+                android:layout_marginTop="50dp"
+                android:textAlignment="center"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="테슬라 모델 Y RWD를 구매한다고 가정.
+\n 현 차량의 가격은 5300만원.
+\n 부가세(VAT)는 차량 구매 가격인 5300만원에 포함.
+\n 차량 취득세는 신차일 경우, 부가세를 제외하고 차량 구매액의 7%를 취득세로 내야 함.
+\n\n 5300만원에서 부가세(10%)인 530만원을 제외하면, 4770만원.
+\n 4770만원에서 취득세(7%)를 계산하면, 대략 334만원이 나옵니다.
+\n 여기서 전기차 취득세 감면 혜텍 140만원을 받으면, 194만원이 나옵니다.
+\n\n 즉 총 자동차 구매액은 5300만원 + 194만원인 5495만원이 됩니다."
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:gravity="center" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
